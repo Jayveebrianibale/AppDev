@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, TextInput, Image, TouchableOpacity} from 'react-native';
 
 export default function OrganizationVerify({navigation}) {

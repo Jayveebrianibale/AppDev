@@ -25,12 +25,18 @@ import { Entypo } from '@expo/vector-icons';
             </TouchableOpacity>
           </View>
 
-        <View>
-          <Text style={styles.schedule}>Upcoming Events</Text>
+        <View style={{flexDirection: 'row', marginTop: 10,}}>
+          
+          <Text style={styles.schedule1}>Upcoming Events</Text>
+          <View style={{flexDirection: 'row', marginLeft: 140, gap: 10,}}>
+            <TouchableOpacity>
+              <Entypo name="plus" size={24} color="gray" />
+            </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-            <Text style={styles.Viewall}>View all</Text>
-          </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Text style={styles.Viewall1}>View all</Text>
+            </TouchableOpacity>
+          </View>
 
         </View>
 
@@ -116,8 +122,13 @@ const styles = StyleSheet.create({
   },
   schedule: {
     color: '#6C63FF',
-    left: 10,
     top: 15,
+    left: 10,
+    fontSize: 20,
+  },
+  schedule1: {
+    color: '#6C63FF',
+    left: 10,
     fontSize: 20,
   },
   scheduleImage: {
@@ -131,6 +142,12 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginRight: 20,
     color: 'darkgray',
+  },
+  Viewall1: {
+    alignSelf: 'flex-end',
+    marginRight: 20,
+    color: 'darkgray',
+    top: 5,
   },
   Dentalname: {
     color:  'darkgray',

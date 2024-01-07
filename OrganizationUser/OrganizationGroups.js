@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { SafeAreaView, StyleSheet, TouchableOpacity, } from 'react-native';
 import GroupList from '../component/Grouplist';
 import { AntDesign } from '@expo/vector-icons';
 

@@ -4,21 +4,21 @@ import { View, FlatList, Text, Image, StyleSheet} from 'react-native';
 const groups = [
   {
     id: '1',
-    name: 'Care International',
-    description: 'CARE is a humanitarian organization that fights global poverty and provides assistance in emergencies.',
-    image: require('../assets/Care-International.jpg'),
-  },
-  {
-    id: '2',
-    name: 'Habitat For Humanity',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Habitathumanity.jpg'),
-  },
-  {
-    id: '3',
     name: 'MCGI Cares',
     description: 'Witness faith, hope, and love in action as the Members Church of God International (MCGI) continue the advocacies of Brother Eli Soriano and Brother Daniel Razon.',
     image: require('../assets/MCGI.webp'),
+  },
+  {
+    id: '2',
+    name: 'Philippine Red Cross',
+    description: 'The Philippine Red Cross is known for its humanitarian services, including disaster response, blood donation drives, and health services.',
+    image: require('../assets/RedCross.jpg'),
+  },
+  {
+    id: '3',
+    name: 'Gawad Kalinga',
+    description: 'Gawad Kalinga is a Philippine-based movement that focuses on community development, providing housing, education, and livelihood programs to those in need.',
+    image: require('../assets/Gawad.jpg'),
   },
   {
     id: '4',
@@ -28,27 +28,21 @@ const groups = [
   },
   {
     id: '5',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Tulay ng Kabataan Foundation',
+    description: 'This foundation is dedicated to helping street children and marginalized youth by providing them with shelter, education, and vocational training. ',
+    image: require('../assets/Kabataan.jpg'),
   },
   {
     id: '6',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Kanlungan sa ER-MA Ministry',
+    description: 'This organization works with street dwellers in Metro Manila, providing them with basic needs such as food, clothing, and medical assistance.',
+    image: require('../assets/Ministry.jpg'),
   },
   {
     id: '7',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
-  },
-  {
-    id: '8',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Childhope Philippines',
+    description: 'This organization aims to help street children by providing them with education, health services, and opportunities for a better future.',
+    image: require('../assets/child.jpg'),
   },
   
 ];
@@ -93,7 +87,6 @@ const styles = StyleSheet.create({
   },
   groupName: {
     fontSize: 25,
-    textAlign: 'center',
     color: '#6C63FF',
   },
   description: {

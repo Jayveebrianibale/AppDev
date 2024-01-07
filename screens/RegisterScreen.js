@@ -3,13 +3,11 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const RegisterScreen = ({ navigation }) => {
-  const [role, setRole] = useState('user'); // Default role is 'user'
+  const [role, setRole] = useState('user');
 
   const handleRegister = () => {
-    // Perform registration logic here based on username, password, and role
     console.log(`Registered as ${role} - Username: ${username}, Password: ${password}`);
 
-    // Navigate to the appropriate screen (e.g., HomeScreen)
     navigation.navigate('HomeScreen');
   };
 
@@ -21,23 +19,22 @@ const RegisterScreen = ({ navigation }) => {
         <View style={styles.roleContainer}>
             <TouchableOpacity
               style={styles.roleButton}
-              onPress={() => setRole('user')}
+              onPress={() => navigation.navigate ('Register')}
               activeOpacity={0.8}
             >
-              <Text style={role === 'user' ? styles.activeButtonText : styles.buttonText}>Barangay User</Text>
+              <Text style={role === 'BarangayUser' ? styles.activeButtonText : styles.buttonText}>Barangay User</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.roleButton}
-              onPress={() => setRole('admin')}
+              onPress={() => navigation.navigate('OrganizationRegister')}
               activeOpacity={0.8}
             >
-              <Text style={role === 'admin' ? styles.activeButtonText : styles.buttonText}>Organization User</Text>
+              <Text style={role === 'OrganizationUser' ? styles.activeButtonText : styles.buttonText}>Organization User</Text>
             </TouchableOpacity>
-      </View>
-      <TouchableOpacity onPress={() => navigation.navigate ('Register')} style={styles.registerButton} activeOpacity={0.8}>
-        <Text style={styles.buttonText}>Continue</Text>
-      </TouchableOpacity>
+
+        </View>
+      <Text style={styles.ThankU}>Thank You!</Text>
     </View>
   );
 };
@@ -86,6 +83,11 @@ const styles = StyleSheet.create({
     roleContainer: {
     flexDirection: 'row',
     gap: 50,
+},
+ThankU: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 30,
 }
 });
 

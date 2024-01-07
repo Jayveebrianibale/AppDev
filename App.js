@@ -22,6 +22,14 @@ import EventList from './component/Eventlist';
 import CharitableGroups from './screens/CharitableGroups';
 import Splashscreen from './screens/Splashscreen';
 import RegisterScreen from './screens/RegisterScreen';
+import BarangayLanding from './OrganizationUser/OrganizationLanding';
+import OrganizationLanding from './OrganizationUser/OrganizationLanding';
+import OrganizationRegister from './OrganizationUser/OrganizationRegister';
+import OrganizationVerify from './OrganizationUser/OrganizationVerify';
+import OrganizationHome from './OrganizationUser/OrganizationHome';
+import OrganizationGroups from './OrganizationUser/OrganizationGroups';
+import OrganizationProfile from './OrganizationUser/OrganizationProfile';
+import OrganizationBottomTabs from './OrganizationUser/OrganizationBottomTabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -106,7 +114,37 @@ export default function App() {
         component={Events}
         options={{title: "",}}
       />
-      
+        <Stack.Screen
+        name="OrganizationLanding"
+        component={OrganizationLanding}
+        options={{title: "",}}
+      />
+        <Stack.Screen
+        name="OrganizationRegister"
+        component={OrganizationRegister}
+        options={{title: "",}}
+      />
+         <Stack.Screen
+        name="OrganizationVerify"
+        component={OrganizationVerify}
+        options={{title: "",}}
+      />
+        <Stack.Screen
+        name="OrganizationBottomTabs"
+        component={OrganizationBottomTabs}
+        options={{title: "",}}
+      />
+         <Stack.Screen
+        name="OrganizationGroups"
+        component={OrganizationGroups}
+        options={{title: "",}}
+      />
+         <Stack.Screen
+        name="OrganizationProfile"
+        component={OrganizationProfile}
+        options={{title: "",}}
+      />
+
     </Stack.Navigator>
    </NavigationContainer>
   );

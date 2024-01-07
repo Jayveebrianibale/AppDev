@@ -20,7 +20,7 @@ export default function Login({navigation}) {
         </Text>
 
       <View>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate ("Verify", {language: "Register Now"})}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate ("Verifyemail", {language: "Register Now"})}>
             <Text style={styles.text}>Login</Text>
         </TouchableOpacity>
       </View> 

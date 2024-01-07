@@ -8,11 +8,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 
 
-function Profile({navigation}) {
+function OrganizationProfile({navigation}) {
   return (
     <View style={styles.container}>
 
-      <TouchableOpacity onPress={() => navigation.navigate ('Messages')} style={{alignSelf: 'flex-end', marginRight: 10, marginTop: 5, }}>
+      <TouchableOpacity onPress={() => navigation.navigate ('Messages')  } style={{alignSelf: 'flex-end', marginRight: 10, marginTop: 5, }}>
         <AntDesign name="message1" size={30} color="#6C63FF" />
       </TouchableOpacity>
 
@@ -24,7 +24,7 @@ function Profile({navigation}) {
       </TouchableOpacity>
      
       <Text style={styles.username}>Jayvee Brian Ibale</Text>
-      <Text style={{color: '#6C63FF', fontSize: 16, }}>Barangay User</Text>
+      <Text style={{color: '#6C63FF', fontSize: 16, }}>Organization User</Text>
       
       <TouchableOpacity style={{alignSelf: 'flex-start', flexDirection: 'row', marginLeft: 10, marginTop: 30,}}>
         <AntDesign style={{marginTop: 5}}  name="user" size={30} color="black" />
@@ -49,7 +49,7 @@ function Profile({navigation}) {
 
         <View>
           <Text style={styles.usernameFontsize}>Groups</Text>
-          <Text style={styles.usernameFontsize1}>Barangay</Text>
+          <Text style={styles.usernameFontsize1}>Organization</Text>
         </View>
       </TouchableOpacity>
 
@@ -136,4 +136,4 @@ const styles = StyleSheet.create({
 
 
 });
-export default Profile;
+export default OrganizationProfile;

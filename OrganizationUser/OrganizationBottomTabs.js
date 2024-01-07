@@ -1,20 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, flex, ImageBackground, SafeAreaView,} from 'react-native';
+import { StyleSheet,} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Settings from './Settings';
-import Groups from './Groups';
-import Events from './Events';
-import Home from './Home';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import Profile from './Profile';
-import BarangayHome from '../OrganizationUser/OrganizationHome';
-import OrganizationHome from '../OrganizationUser/OrganizationHome';
-import OrganizationGroups from '../OrganizationUser/OrganizationGroups';
-import OrganizationProfile from '../OrganizationUser/OrganizationProfile';
+import OrganizationHome from './OrganizationHome';
+import OrganizationGroups from './OrganizationGroups';
+import OrganizationProfile from './OrganizationProfile';
 
 const Tab = createBottomTabNavigator();
 const screenOptions = {
@@ -34,12 +24,12 @@ const screenOptions = {
     },
   }
 }
-export default function Bottomtabs() {
+export default function OrganizationBottomTabs() {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
     <Tab.Screen
     name="Home"
-    component={Home}
+    component={OrganizationHome}
     options={{
       tabBarIcon: ({ color, focused }) => (
       <Ionicons name="ios-home" size={30} color={focused ? '#6C63FF' : color} />
@@ -48,7 +38,7 @@ export default function Bottomtabs() {
     />
     <Tab.Screen
      name="Groups" 
-     component={Groups}
+     component={OrganizationGroups}
      options={{
       tabBarIcon: ({ color, focused }) => (
       <MaterialIcons name="groups" size={30} color={focused ? '#6C63FF' : color} />
@@ -57,7 +47,7 @@ export default function Bottomtabs() {
     />
     <Tab.Screen
       name="Profile"
-      component={Profile}
+      component={OrganizationProfile}
       options={{
         tabBarIcon: ({ color, focused }) => (
           <MaterialIcons name="face" size={30} color={focused ? '#6C63FF' : color} />

@@ -29,6 +29,7 @@ import OrganizationHome from './OrganizationUser/OrganizationHome';
 import OrganizationGroups from './OrganizationUser/OrganizationGroups';
 import OrganizationProfile from './OrganizationUser/OrganizationProfile';
 import OrganizationBottomTabs from './OrganizationUser/OrganizationBottomTabs';
+import OrganizationFreeServices from './OrganizationUser/OrganizationFreeServices';
 
 const Stack = createNativeStackNavigator();
 
@@ -142,6 +143,11 @@ export default function App() {
         name="OrganizationProfile"
         component={OrganizationProfile}
         options={{title: "",}}
+      />
+         <Stack.Screen
+        name="OrganizationFreeServices"
+        component={OrganizationFreeServices}
+        options={{title: "Free Services",headerShown: true, headerShadowVisible: false}}
       />
 
     </Stack.Navigator>

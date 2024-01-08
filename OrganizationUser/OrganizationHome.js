@@ -29,7 +29,7 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.schedule}>Upcoming Events</Text>
           <View style={{flexDirection: 'row', marginLeft: 125, gap: 10,}}>
             <TouchableOpacity>
-              <Entypo name="plus" size={24} color="black" />
+              <Entypo name="plus" size={24} color="gray" />
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
@@ -50,10 +50,10 @@ import { Entypo } from '@expo/vector-icons';
 
           <View style={{flexDirection: 'row', marginLeft: 150, gap: 10,}}>
             <TouchableOpacity>
-              <Entypo name="plus" size={24} color="black" />
+              <Entypo name="plus" size={24} color="gray" />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('FreeServices')}>
+            <TouchableOpacity onPress={() => navigation.navigate('OrganizationFreeServices')}>
               <Text style={styles.Viewall}>View all</Text>
             </TouchableOpacity>
           </View>
@@ -69,7 +69,7 @@ import { Entypo } from '@expo/vector-icons';
 
           <View style={{flexDirection: 'row', marginLeft: 80, gap: 5,}}>
             <TouchableOpacity>
-              <Entypo name="plus" size={24} color="black" />
+              <Entypo name="plus" size={24} color="gray" />
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('CharitableGroups')}>

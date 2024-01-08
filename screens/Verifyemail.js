@@ -55,6 +55,7 @@ button: {
     padding: 12,
     borderRadius: 50,
     width: 100,
+    marginTop: 5,
 },
 verify: {
   color: 'white',

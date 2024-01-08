@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
   Text: {
     marginTop: 160,
     fontSize: 25,
-    marginBottom: 15,
   },
   Image: {
     height: 250,

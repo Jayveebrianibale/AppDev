@@ -32,11 +32,6 @@ const FreeServices = () => {
       <View style={styles.itemContainer}>
         <Image source={item.image} style={styles.image} />
         <Text style={styles.title}>{item.title}</Text>
-        <TouchableOpacity>
-          <Text style={styles.messageUS}> Messages Us
-          <AntDesign name="message1" size={24} color="gray" />
-          </Text>
-        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );

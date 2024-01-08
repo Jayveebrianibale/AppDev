@@ -5,7 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 function Events() {
   return (
-      <EventList/>
+        <EventList/>
   );
 }
 

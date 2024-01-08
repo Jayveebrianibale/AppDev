@@ -28,27 +28,27 @@ const groups = [
   },
   {
     id: '5',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Yellow Boat of Hope Foundation',
+    description: 'The Yellow Boat of Hope Foundation focuses on providing transportation and access to education for children in remote and impoverished areas by using boats.',
+    image: require('../assets/boat.jpg'),
   },
   {
     id: '6',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Operation Smile Philippines',
+    description: 'Operation Smile provides free surgical services to children born with cleft lip and cleft palate, helping them lead healthier and more fulfilling lives.',
+    image: require('../assets/smile.jpg'),
   },
   {
     id: '7',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Childhope Philippines',
+    description: 'This organization aims to help street children by providing them with education, health services, and opportunities for a better future.',
+    image: require('../assets/childhope.jpg'),
   },
   {
     id: '8',
-    name: 'UNICEF',
-    description: 'This organization works to eliminate substandard housing and homelessness by building and renovating homes for those in need. ',
-    image: require('../assets/Unicef.jpg'),
+    name: 'Philippine Cancer Society',
+    description: 'The Philippine Cancer Society offers support and assistance to cancer patients and their families, including free medical consultations and services.',
+    image: require('../assets/Cancer.jpg'),
   },
   
 ];
@@ -93,15 +93,13 @@ const styles = StyleSheet.create({
   },
   groupName: {
     fontSize: 25,
-    textAlign: 'center',
     color: '#6C63FF',
   },
   description: {
     color: 'gray',
-    marginTop: 10,
   },
   listContent: {
-    paddingBottom: 110,
+    paddingBottom: 50,
   },
 });
 

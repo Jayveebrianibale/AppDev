@@ -41,7 +41,7 @@ const screenOptions = {
     right: 0,
     left: 0,
     elevation: 0,
-    height: 60,
+    height: 50,
     background: '#fff' 
     
   }
@@ -96,7 +96,7 @@ export default function App() {
       <Stack.Screen
         name="FreeServices"
         component={FreeServices}
-        options={{title: "",}}
+        options={{title: "Free Services", headerShown: true, headerShadowVisible: false,}}
       />
       <Stack.Screen
         name="Eventlist"
@@ -111,7 +111,7 @@ export default function App() {
       <Stack.Screen
         name="Events"
         component={Events}
-        options={{title: "",}}
+        options={{title: "Upcoming Events", headerShown: true, headerShadowVisible: false,}}
       />
         <Stack.Screen
         name="OrganizationLanding"

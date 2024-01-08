@@ -53,7 +53,6 @@ const EventList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    top: 30,
   },
   itemContainer: {
     padding: 16,
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
   },
 
   listContent: {
-    paddingBottom: 40,
+    paddingBottom: 10,
   },
 
 });

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Text: {
-    marginTop: 160,
+    marginTop: 190,
     fontSize: 25,
   },
   Image: {

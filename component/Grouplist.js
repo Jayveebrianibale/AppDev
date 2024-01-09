@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
   listContent: {
-    paddingBottom: 50,
+    paddingBottom: 110,
   },
 });
 

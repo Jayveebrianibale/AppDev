@@ -1,33 +1,36 @@
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet,} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const messagesData = [
-  { id: '1', sender: 'Gojo Saturo', message: 'Pogi ko!', avatar: require('../assets/Gojo.webp') },
-  { id: '2', sender: 'Megume Fushiguro', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '3', sender: 'Toji Fushiguro', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '4', sender: 'Goku', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '5', sender: 'Vegeta', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '6', sender: 'Naruto Uzumaki', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '7', sender: 'Uchiha Sasuke', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '8', sender: 'Izuku Midoriya ', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '9', sender: 'Izumi Miyamura', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '10', sender: 'Uchiha Itachi', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
-  { id: '11', sender: 'Minato Namikaze', message: 'HAHAHAHAHAHA!', avatar: require('../assets/Gojo.webp') },
+  { id: '1', sender: 'Health Services', message: 'Hello, how can i help you?', nickname: 'Nonprofit Organization', avatar: require('../assets/closeteam.jpg') },
+  { id: '2', sender: 'Education', message: 'Hello, how can i help you?', nickname: 'Nonprofit Organization', avatar: require('../assets/Education.jpg') },
+  { id: '3', sender: 'Government Services', message: 'Hello, how can i help you?', nickname: 'Nonprofit Organization', avatar: require('../assets/Government.jpg') },
+  { id: '4', sender: 'Social Services', message: 'Hello, how can i help you?', nickname: 'Nonprofit Organization', avatar: require('../assets/Social.jpg') },
 
-  // Add more messages as needed
 ];
 
-const MessageItem = ({ sender, message, avatar }) => (
-  <View style={styles.messageItem}>
-    <Image source={avatar} style={styles.avatar} />
-    <View style={styles.messageContent}>
-      <Text style={styles.sender}>{sender}</Text>
-      <Text>{message}</Text>
-    </View>
-  </View>
-);
+const MessageItem = ({ id, sender, message, avatar, nickname}) => {
+  const messenger = {id, sender, message, avatar, nickname}
+  const navigation = useNavigation();
 
-const MessagesScreen = () => (
+  return (
+    <TouchableOpacity
+      onPress={() =>  {
+       navigation.navigate('Chat', {messenger})}}>
+      <View style={styles.messageItem}>
+        <Image source={avatar} style={styles.avatar} />
+        <View style={styles.messageContent}>
+          <Text style={styles.sender}>{sender}</Text>
+          <Text>{message}</Text>
+        </View>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+const Messages = ({navigation}) => (
   <View style={styles.container}>
     <FlatList
       data={messagesData}
@@ -40,8 +43,7 @@ const MessagesScreen = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    top: 40,
+    padding: 12,
   },
   messageItem: {
     flexDirection: 'row',
@@ -66,6 +68,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MessagesScreen;
+export default Messages;
 
  

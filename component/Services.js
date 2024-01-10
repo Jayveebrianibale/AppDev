@@ -1,45 +1,51 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-
-const freeServices = [
-  {
-    id: '1',
-    title: 'Health Services',
-    image: require('../assets/closeteam.jpg'),
-  },
-  {
-    id: '2',
-    title: 'Education', 
-    image: require('../assets/Education.jpg'),
-  },
-  {
-    id: '3',
-    title: 'Government Services',
-    image: require('../assets/Government.jpg'),
-  },
-  {
-    id: '4',
-    title: 'Social Services',
-    image: require('../assets/Social.jpg'),
-  },
-];
+import { useNavigation } from '@react-navigation/native';
 
 const Services = () => {
-  const renderItem = ({ item }) => (
+  const navigation = useNavigation();
+
+  const freeServices = [
+    {
+      id: '1',
+      title: 'Health Services',
+      image: require('../assets/closeteam.jpg'),
+    },
+    {
+      id: '2',
+      title: 'Education', 
+      image: require('../assets/Education.jpg'),
+    },
+    {
+      id: '3',
+      title: 'Government Services',
+      image: require('../assets/Government.jpg'),
+    },
+    {
+      id: '4',
+      title: 'Social Services',
+      image: require('../assets/Social.jpg'),
+    },
+  ];
+
+  const renderItem = ({ item}) => (
     <SafeAreaView>
       <View style={styles.itemContainer}>
         <Image source={item.image} style={styles.image} />
-          <View style={styles.MessageContainer}>
-            <Text style={styles.title}>{item.title}</Text>
-            <TouchableOpacity>
-              <Text style={styles.messageUS}>Message Us
+        <View style={styles.MessageContainer}>
+          <Text style={styles.title}>{item.title}</Text>
+          
+          <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('Messages');
+            }}
+>         
+            <Text style={styles.messageUS}>Message Us
               <AntDesign name="message1" size={24} color="black" />
-              </Text>
-            </TouchableOpacity>
-          </View>
-
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );

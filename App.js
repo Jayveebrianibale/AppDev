@@ -30,6 +30,7 @@ import OrganizationGroups from './OrganizationUser/OrganizationGroups';
 import OrganizationProfile from './OrganizationUser/OrganizationProfile';
 import OrganizationBottomTabs from './OrganizationUser/OrganizationBottomTabs';
 import OrganizationFreeServices from './OrganizationUser/OrganizationFreeServices';
+import Chat from './screens/Chat';
 
 const Stack = createNativeStackNavigator();
 
@@ -92,7 +93,9 @@ export default function App() {
        <Stack.Screen
         name="Messages"
         component={Messages}
-        options={{title: "",}}
+        options={{title: "Messages",headerShown: true, headerShadowVisible: false,headerStyle: {
+          backgroundColor: '#F4F4F4',
+        },}}
       />
       <Stack.Screen
         name="FreeServices"
@@ -148,6 +151,13 @@ export default function App() {
         name="OrganizationFreeServices"
         component={OrganizationFreeServices}
         options={{title: "Free Services",headerShown: true, headerShadowVisible: false}}
+      />
+        <Stack.Screen
+        name="Chat"
+        component={Chat}
+        options={{headerShown: true, headerShadowVisible: false,headerStyle: {
+          backgroundColor: '#F4F4F4',
+        },}}
       />
 
     </Stack.Navigator>

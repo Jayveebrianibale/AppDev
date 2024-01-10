@@ -14,7 +14,7 @@ const Splashscreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image style={styles.icon} source={require('../assets/SplashScreen.png')} />
-      <Text style={styles.Icare}>Charitable  {"\n"}           Icare</Text>
+      <Text style={styles.Icare}>Icare</Text>
     </View>
   );
 };

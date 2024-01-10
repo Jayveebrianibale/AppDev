@@ -67,10 +67,7 @@ import { Entypo } from '@expo/vector-icons';
         <View style={{flexDirection: 'row', marginTop: 10, marginLeft: 10}}>
           <Text style={styles.schedule}>Most Charitable Groups</Text>
 
-          <View style={{flexDirection: 'row', marginLeft: 80, gap: 5,}}>
-            <TouchableOpacity>
-              <Entypo name="plus" size={24} color="gray" />
-            </TouchableOpacity>
+          <View style={{flexDirection: 'row', marginLeft: 110, gap: 5,}}>
 
             <TouchableOpacity onPress={() => navigation.navigate('CharitableGroups')}>
               <Text style={styles.Viewall}>View all</Text>

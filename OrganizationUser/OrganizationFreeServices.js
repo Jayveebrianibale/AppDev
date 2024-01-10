@@ -33,11 +33,6 @@ const OrganizationFreeServices = () => {
         <Image source={item.image} style={styles.image} />
           <View style={styles.MessageContainer}>
             <Text style={styles.title}>{item.title}</Text>
-            <TouchableOpacity>
-              <Text style={styles.messageUS}>Message Us
-              <AntDesign name="message1" size={24} color="black" />
-              </Text>
-            </TouchableOpacity>
           </View>
 
       </View>

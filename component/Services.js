@@ -29,7 +29,7 @@ const Services = () => {
     },
   ];
 
-  const renderItem = ({ item}) => (
+  const renderItem = ({item}) => (
     <SafeAreaView>
       <View style={styles.itemContainer}>
         <Image source={item.image} style={styles.image} />
@@ -38,7 +38,7 @@ const Services = () => {
           
           <TouchableOpacity
               onPress={() => {
-                navigation.navigate('Messages');
+                navigation.navigate('Messages',);
             }}
 >         
             <Text style={styles.messageUS}>Message Us

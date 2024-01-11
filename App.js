@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 import Login from './screens/Login';
 import Landing from './screens/Landing';
 import Verifyemail from './screens/Verifyemail';
 import { CurrentRenderContext, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Entypo } from '@expo/vector-icons';
 
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -54,7 +55,7 @@ export default function App() {
   return (
     
    <NavigationContainer>
-    <Stack.Navigator initialRouteName="SplashScreen" headerMode="none" screenOptions={screenOptions} >
+    <Stack.Navigator initialRouteName="Splashscreen" headerMode="none" screenOptions={screenOptions} >
       <Stack.Screen
         name="Splashscreen"
         component={Splashscreen}
@@ -94,7 +95,7 @@ export default function App() {
         name="Messages"
         component={Messages}
         options={{title: "Messages",headerShown: true, headerShadowVisible: false,headerStyle: {
-          backgroundColor: '#F4F4F4',
+          backgroundColor: '#F4F4F4', 
         },}}
       />
       <Stack.Screen
@@ -115,7 +116,12 @@ export default function App() {
       <Stack.Screen
         name="Events"
         component={Events}
-        options={{title: "Upcoming Events", headerShown: true, headerShadowVisible: false,}}
+        options={{title: "Upcoming Events", headerShown: true, headerShadowVisible: false,
+        headerRight: () => (
+          <TouchableOpacity>
+            <Entypo name="add-to-list" size={24} color="black"/>
+          </TouchableOpacity>
+        )}}
       />
         <Stack.Screen
         name="OrganizationLanding"
@@ -150,7 +156,12 @@ export default function App() {
          <Stack.Screen
         name="OrganizationFreeServices"
         component={OrganizationFreeServices}
-        options={{title: "Free Services",headerShown: true, headerShadowVisible: false}}
+        options={{title: "Free Services",headerShown: true, headerShadowVisible: false,
+        headerRight: () => (
+          <TouchableOpacity>
+            <Entypo name="add-to-list" size={24} color="black"/>
+          </TouchableOpacity>
+        )}}
       />
         <Stack.Screen
         name="Chat"

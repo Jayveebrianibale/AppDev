@@ -28,13 +28,10 @@ import { Entypo } from '@expo/vector-icons';
         <View style={{flexDirection: 'row', marginTop: 10,}}>
           
           <Text style={styles.schedule1}>Upcoming Events</Text>
-          <View style={{flexDirection: 'row', marginLeft: 140, gap: 10,}}>
-            <TouchableOpacity>
-              <Entypo name="plus" size={24} color="gray" />
-            </TouchableOpacity>
+          <View>
 
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Text style={styles.Viewall1}>View all</Text>
+              <Text style={styles.Viewall1}>View All</Text>
             </TouchableOpacity>
           </View>
 
@@ -50,7 +47,7 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.schedule}>Free Services</Text>
 
           <TouchableOpacity onPress={() => navigation.navigate('FreeServices')}>
-            <Text style={styles.Viewall}>View all</Text>
+            <Text style={styles.Viewall}>View All</Text>
           </TouchableOpacity>
         </View>
 
@@ -63,7 +60,7 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.schedule}>Most Charitable Groups</Text>
 
           <TouchableOpacity onPress={() => navigation.navigate('CharitableGroups')}>
-            <Text style={styles.Viewall}>View all</Text>
+            <Text style={styles.Viewall}>View All</Text>
           </TouchableOpacity>
         </View>
 
@@ -140,7 +137,7 @@ const styles = StyleSheet.create({
   },
   Viewall: {
     alignSelf: 'flex-end',
-    marginRight: 20,
+    marginRight: 30,
     color: 'darkgray',
   },
   Viewall1: {
@@ -148,6 +145,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
     color: 'darkgray',
     top: 5,
+    marginLeft: 170,
   },
   Dentalname: {
     color:  'darkgray',

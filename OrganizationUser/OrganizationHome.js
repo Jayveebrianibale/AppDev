@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
 
- function OrganizationHome({navigation}) {
+ function Home({navigation}) {
   return (
     <SafeAreaView>
       <ScrollView style={styles.listContent}>
@@ -24,16 +25,13 @@ import { Entypo } from '@expo/vector-icons';
             </TouchableOpacity>
           </View>
 
-        <View style={{flexDirection: 'row', marginTop: 10, marginLeft: 10}}>
+        <View style={{flexDirection: 'row', marginTop: 10,}}>
           
-          <Text style={styles.schedule}>Upcoming Events</Text>
-          <View style={{flexDirection: 'row', marginLeft: 125, gap: 10,}}>
-            <TouchableOpacity>
-              <Entypo name="plus" size={24} color="gray" />
-            </TouchableOpacity>
+          <Text style={styles.schedule1}>Upcoming Events</Text>
+          <View>
 
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Text style={styles.Viewall}>View all</Text>
+              <Text style={styles.Viewall1}>View All</Text>
             </TouchableOpacity>
           </View>
 
@@ -45,18 +43,12 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.Dentalname}>Dental Clinic                                 Tomorrow at 8:00AM</Text>
         </View>
 
-        <View style={{flexDirection: 'row', marginTop: 10, marginLeft: 10}}>
+        <View>
           <Text style={styles.schedule}>Free Services</Text>
 
-          <View style={{flexDirection: 'row', marginLeft: 150, gap: 10,}}>
-            <TouchableOpacity>
-              <Entypo name="plus" size={24} color="gray" />
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => navigation.navigate('OrganizationFreeServices')}>
-              <Text style={styles.Viewall}>View all</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('OrganizationFreeServices')}>
+            <Text style={styles.Viewall}>View All</Text>
+          </TouchableOpacity>
         </View>
 
         <View>
@@ -64,15 +56,12 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.Dentalname}>HEALTH SERVICES</Text>
         </View>
 
-        <View style={{flexDirection: 'row', marginTop: 10, marginLeft: 10}}>
+        <View>
           <Text style={styles.schedule}>Most Charitable Groups</Text>
 
-          <View style={{flexDirection: 'row', marginLeft: 110, gap: 5,}}>
-
-            <TouchableOpacity onPress={() => navigation.navigate('CharitableGroups')}>
-              <Text style={styles.Viewall}>View all</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('CharitableGroups')}>
+            <Text style={styles.Viewall}>View All</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.last}>
@@ -92,6 +81,10 @@ import { Entypo } from '@expo/vector-icons';
 
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
+    // backgroundColor: 'white',
+    // alignItems: 'center',
+    // justifyContent: 'center',
    
   },
   searchBarContainer: {
@@ -126,6 +119,13 @@ const styles = StyleSheet.create({
   },
   schedule: {
     color: '#6C63FF',
+    top: 15,
+    left: 10,
+    fontSize: 20,
+  },
+  schedule1: {
+    color: '#6C63FF',
+    left: 10,
     fontSize: 20,
   },
   scheduleImage: {
@@ -136,8 +136,16 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   Viewall: {
-    marginTop: 5,
+    alignSelf: 'flex-end',
+    marginRight: 30,
     color: 'darkgray',
+  },
+  Viewall1: {
+    alignSelf: 'flex-end',
+    marginRight: 20,
+    color: 'darkgray',
+    top: 5,
+    marginLeft: 170,
   },
   Dentalname: {
     color:  'darkgray',
@@ -151,4 +159,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default OrganizationHome;
+export default Home;

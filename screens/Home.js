@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
   schedule: {
     color: '#6C63FF',
     top: 15,
-    left: 10,
+    left: 15,
     fontSize: 20,
   },
   schedule1: {
     color: '#6C63FF',
-    left: 10,
+    left: 12,
     fontSize: 20,
   },
   scheduleImage: {

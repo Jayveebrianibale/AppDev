@@ -7,6 +7,7 @@ import Verifyemail from './screens/Verifyemail';
 import { CurrentRenderContext, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -32,6 +33,7 @@ import OrganizationProfile from './OrganizationUser/OrganizationProfile';
 import OrganizationBottomTabs from './OrganizationUser/OrganizationBottomTabs';
 import OrganizationFreeServices from './OrganizationUser/OrganizationFreeServices';
 import Chat from './screens/Chat';
+import OrganizationEvent from './OrganizationUser/OrganizationEvent';
 
 const Stack = createNativeStackNavigator();
 
@@ -101,7 +103,8 @@ export default function App() {
       <Stack.Screen
         name="FreeServices"
         component={FreeServices}
-        options={{title: "Free Services", headerShown: true, headerShadowVisible: false,}}
+        options={{title: "Free Services", headerShown: true, headerShadowVisible: false,headerStyle: {backgroundColor: '#F4F4F4',
+      }}}
       />
       <Stack.Screen
         name="Eventlist"
@@ -111,17 +114,19 @@ export default function App() {
       <Stack.Screen
         name="CharitableGroups"
         component={CharitableGroups}
-        options={{title: "",}}
+        options={{title: "Charitable Groups", headerShown: true, headerShadowVisible: false, headerStyle: {backgroundColor: '#F4F4F4',
+      },
+        headerRight: () => (
+          <TouchableOpacity>
+            <AntDesign name="addusergroup" size={24} color="black" />
+          </TouchableOpacity>
+        )}}
       />
       <Stack.Screen
         name="Events"
         component={Events}
-        options={{title: "Upcoming Events", headerShown: true, headerShadowVisible: false,
-        headerRight: () => (
-          <TouchableOpacity>
-            <Entypo name="add-to-list" size={24} color="black"/>
-          </TouchableOpacity>
-        )}}
+        options={{title: "Upcoming Events", headerShown: true, headerShadowVisible: false, headerStyle: {backgroundColor: '#F4F4F4',
+      }}}
       />
         <Stack.Screen
         name="OrganizationLanding"
@@ -153,6 +158,17 @@ export default function App() {
         component={OrganizationProfile}
         options={{title: "",}}
       />
+        <Stack.Screen
+        name="OrganizationEvent"
+        component={OrganizationEvent}
+        options={{title: "Upcoming Events",headerShown: true, headerShadowVisible: false,
+        headerRight: () => (
+          <TouchableOpacity>
+            <Entypo name="add-to-list" size={24} color="black"/>
+          </TouchableOpacity>
+        ), headerStyle: {backgroundColor: '#F4F4F4',
+      }}}
+      />
          <Stack.Screen
         name="OrganizationFreeServices"
         component={OrganizationFreeServices}
@@ -161,14 +177,14 @@ export default function App() {
           <TouchableOpacity>
             <Entypo name="add-to-list" size={24} color="black"/>
           </TouchableOpacity>
-        )}}
+        ), headerStyle: {backgroundColor: '#F4F4F4',
+      }}}
       />
         <Stack.Screen
         name="Chat"
         component={Chat}
-        options={{headerShown: true, headerShadowVisible: false,headerStyle: {
-          backgroundColor: '#F4F4F4',
-        },}}
+        options={{headerShown: true, headerShadowVisible: false, headerStyle: {backgroundColor: '#F4F4F4',
+        }}}
       />
 
     </Stack.Navigator>

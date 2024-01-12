@@ -30,7 +30,7 @@ import { Entypo } from '@expo/vector-icons';
           <Text style={styles.schedule1}>Upcoming Events</Text>
           <View>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+            <TouchableOpacity onPress={() => navigation.navigate('OrganizationEvent')}>
               <Text style={styles.Viewall1}>View All</Text>
             </TouchableOpacity>
           </View>

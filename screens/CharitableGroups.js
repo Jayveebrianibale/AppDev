@@ -7,13 +7,6 @@ import { AntDesign } from '@expo/vector-icons';
 function CharitableGroups() {
   return (
       <SafeAreaView>
-        <TouchableOpacity>
-      <AntDesign name="addusergroup"
-        size={24}
-        color="black"
-        style={{alignSelf: 'flex-end', marginTop: 35, marginRight: 10,}}
-        />
-      </TouchableOpacity>
         <Charitable/>
       </SafeAreaView>
   );

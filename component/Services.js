@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Services = () => {
   const navigation = useNavigation();
+ 
 
   const freeServices = [
     {
@@ -29,26 +30,38 @@ const Services = () => {
     },
   ];
 
-  const renderItem = ({item}) => (
-    <SafeAreaView>
-      <View style={styles.itemContainer}>
-        <Image source={item.image} style={styles.image} />
-        <View style={styles.MessageContainer}>
-          <Text style={styles.title}>{item.title}</Text>
-          
-          <TouchableOpacity
+  
+
+  const renderItem = ({ item }) => {
+    const messenger = {
+      avatar: item.image,
+      sender: item.title,
+      message: 'DefaultMessage', 
+      nickname: 'Non Profit Organization', 
+      
+    };
+  
+    return (
+      <SafeAreaView>
+        <View style={styles.itemContainer}>
+          <Image source={item.image} style={styles.image} />
+          <View style={styles.MessageContainer}>
+            <Text style={styles.title}>{item.title}</Text>
+            
+            <TouchableOpacity
               onPress={() => {
-                navigation.navigate('Messages',);
-            }}
->         
-            <Text style={styles.messageUS}>Message Us
-              <AntDesign name="message1" size={24} color="black" />
-            </Text>
-          </TouchableOpacity>
+                navigation.navigate('Chat', { messenger });
+              }}
+            >         
+              <Text style={styles.messageUS}>Message Us
+                <AntDesign name="message1" size={24} color="black" />
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
-    </SafeAreaView>
-  );
+      </SafeAreaView>
+    );
+  };
 
   return (
     <FlatList
@@ -90,7 +103,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   listContent: {
-    paddingBottom: 30,
+    paddingBottom: 10,
   },
 });
 
